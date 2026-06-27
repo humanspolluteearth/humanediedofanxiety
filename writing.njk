@@ -6,12 +6,12 @@ pageType: writing
 ---
 <h1 class="writing-title animate-in">Writing</h1>
 
-{% for group in writing.years %}
+{% for group in collections.postsByYear %}
 <section class="year-group animate-in">
   <div class="year-group__label">{{ group.year }}</div>
   <div class="year-group__list">
     {% for post in group.posts %}
-    <a href="{{ post.url }}" class="year-group__link">{{ post.title }}</a>
+    <a href="{{ post.url }}" class="year-group__link">{{ post.data.title }}</a>
     {% endfor %}
   </div>
 </section>

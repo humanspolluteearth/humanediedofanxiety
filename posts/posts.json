@@ -1,0 +1,5 @@
+{
+  "layout": "markdown-post.njk",
+  "tags": ["posts"],
+  "pageType": "post"
+}
