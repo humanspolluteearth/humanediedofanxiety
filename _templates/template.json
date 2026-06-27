@@ -1,0 +1,69 @@
+{
+  "_instructions": "TEMPLATE — Copy this file to _data/<your-post-slug>.json and fill in your content. Then copy template.njk to <your-post-slug>.njk. Finally, add an entry to _data/writing.json.",
+
+  "date": "Jun 27, 2026",
+  "title": "Your Post Title Here",
+  "initialLikes": 0,
+
+  "intro": "Opening paragraph — hook the reader with the core problem or idea.",
+  "summaryParagraph": "Second paragraph — expand on the intro with more context. Remove this key if you don't need it.",
+  "contextParagraph": "Third paragraph — set the stage before diving into sections. Remove this key if you don't need it.",
+
+  "sections": [
+    {
+      "heading": "Section Heading",
+      "paragraphs": [
+        "A plain text paragraph.",
+        "A paragraph with an <a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">inline link</a>. HTML is supported here."
+      ]
+    },
+    {
+      "heading": "A Section With a Bullet List",
+      "unorderedList": [
+        { "text": "First bullet point" },
+        { "text": "Bullet with nested items", "subItems": ["Sub-item A", "Sub-item B"] },
+        { "text": "Third bullet point" }
+      ]
+    },
+    {
+      "heading": "A Section With a Numbered List",
+      "orderedList": [
+        "Step one — do the thing.",
+        "Step two — do the next thing.",
+        "Step three — you're done."
+      ]
+    },
+    {
+      "heading": "A Section With an Image",
+      "paragraphs": [
+        "Some text before the image."
+      ],
+      "image": {
+        "src": "/your-image.jpg",
+        "alt": "Descriptive alt text for the image"
+      }
+    },
+    {
+      "heading": "A Section With a Diagram",
+      "diagram": [
+        { "emoji": "📱", "bg": "#f3f4f6", "color": "#1f2937", "label": "Input" },
+        { "emoji": "⚙️", "bg": "#dbeafe", "color": "#2563eb", "label": "Process" },
+        { "emoji": "✅", "bg": "#dcfce7", "color": "#16a34a", "label": "Output" }
+      ]
+    },
+    {
+      "heading": "A Section With a Code Block",
+      "code": "const greeting = 'Hello, world!';\nconsole.log(greeting);"
+    },
+    {
+      "heading": "A Section With a Blockquote",
+      "blockquote": "A memorable quote or callout that deserves visual emphasis."
+    }
+  ],
+
+  "readNext": [
+    { "title": "Another Post Title", "url": "#" },
+    { "title": "Yet Another Post", "url": "#" },
+    { "title": "One More Post", "url": "/writing/" }
+  ]
+}

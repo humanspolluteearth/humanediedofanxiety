@@ -1,0 +1,26 @@
+{
+  "name": "Brian Lovin",
+  "defaultDescription": "Brian Lovin — Software designer living in San Francisco.",
+  "socials": {
+    "twitter": "https://x.com",
+    "youtube": "https://youtube.com",
+    "github": "https://github.com"
+  },
+  "navLinks": [
+    { "label": "Home", "url": "/", "pageType": "home" },
+    { "label": "About", "url": "/about/", "pageType": "about" },
+    { "label": "Writing", "url": "/writing/", "pageType": "writing" }
+  ],
+  "navProjects": [
+    { "label": "Hacker News", "url": "#" },
+    { "label": "App Dissection", "url": "#" },
+    { "label": "Stack", "url": "#" },
+    { "label": "AMA", "url": "#" },
+    { "label": "TIL", "url": "#" },
+    { "label": "Listening", "url": "#" },
+    { "label": "Sites", "url": "#" },
+    { "label": "Shiori", "url": "#" },
+    { "label": "HN CLI", "url": "#" },
+    { "label": "Tax UI", "url": "#" }
+  ]
+}

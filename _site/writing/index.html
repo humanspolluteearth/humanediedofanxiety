@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Writing by Brian Lovin — Articles on design, development, productivity, and startups.">
+  <title>Brian Lovin — Writing</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <button class="topbar__menu-btn" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+    
+    <div class="topbar__breadcrumb">
+      <a href="/">Brian Lovin</a>
+      <span class="topbar__breadcrumb-sep">/</span>
+      <span class="topbar__breadcrumb-current">Writing</span>
+    </div>
+    
+  </header>
+
+  <!-- Slide-out Navigation Drawer -->
+  <nav class="nav-drawer" aria-label="Main Navigation">
+    <button class="nav-drawer__close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="nav-drawer__links">
+      
+      <a href="/" class="nav-drawer__link">Home</a>
+      
+      <a href="/about/" class="nav-drawer__link">About</a>
+      
+      <a href="/writing/" class="nav-drawer__link is-active">Writing</a>
+      
+      
+      <div class="nav-drawer__section-label">Projects</div>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Hacker News</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">App Dissection</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Stack</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">AMA</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">TIL</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Listening</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Sites</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Shiori</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">HN CLI</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Tax UI</a>
+      
+    </div>
+    
+    <div class="nav-drawer__social">
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+
+  <!-- Page Content -->
+  <main class="page-wrapper page-content">
+    <h1 class="writing-title animate-in">Writing</h1>
+
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2026</div>
+  <div class="year-group__list">
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Give your agent a laboratory, pt. II</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Why I&#39;m excited about Notion Workers</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Use the ✦ Hyper key</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Omarchy first impressions</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Syncing Claude Code settings between computers</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Give your agent a stopwatch</a>
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Give your agent a laboratory</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2025</div>
+  <div class="year-group__list">
+    
+    <a href="/texting-with-notion-ai/" class="year-group__link">Texting with Notion AI</a>
+    
+    <a href="#" class="year-group__link">Hiring design-minded frontend engineers</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2024</div>
+  <div class="year-group__list">
+    
+    <a href="#" class="year-group__link">Team communication is broken</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2022</div>
+  <div class="year-group__list">
+    
+    <a href="#" class="year-group__link">Framer Sites first impressions</a>
+    
+    <a href="#" class="year-group__link">Design critique for fun and profit</a>
+    
+    <a href="#" class="year-group__link">The Side Project Prophecy</a>
+    
+    <a href="#" class="year-group__link">How my website works</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2021</div>
+  <div class="year-group__list">
+    
+    <a href="#" class="year-group__link">Typing fast is a high-leverage skill</a>
+    
+    <a href="#" class="year-group__link">Dear Apple: Please fix iMessage spam</a>
+    
+    <a href="#" class="year-group__link">The shape of software</a>
+    
+    <a href="#" class="year-group__link">What I&#39;ve learned so far about design advising and angel investing</a>
+    
+    <a href="#" class="year-group__link">How to give a great product design portfolio presentation</a>
+    
+    <a href="#" class="year-group__link">Make a personal changelog</a>
+    
+    <a href="#" class="year-group__link">What I learned from Staff Design</a>
+    
+    <a href="#" class="year-group__link">My playbook for shipping side projects</a>
+    
+    <a href="#" class="year-group__link">Becoming a better interviewer</a>
+    
+    <a href="#" class="year-group__link">2020 in review</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2020</div>
+  <div class="year-group__list">
+    
+    <a href="#" class="year-group__link">Reasons you aren&#39;t updating your personal site</a>
+    
+    <a href="#" class="year-group__link">Tailwind CSS first impressions</a>
+    
+    <a href="#" class="year-group__link">Design to save people from themselves</a>
+    
+    <a href="#" class="year-group__link">True respect is the difference</a>
+    
+    <a href="#" class="year-group__link">Writing better self reviews</a>
+    
+    <a href="#" class="year-group__link">2020 mid-year review</a>
+    
+    <a href="#" class="year-group__link">Quality software</a>
+    
+    <a href="#" class="year-group__link">Just-for-me authentication</a>
+    
+    <a href="#" class="year-group__link">Using cookies to authenticate Next.js + Apollo GraphQL requests</a>
+    
+    <a href="#" class="year-group__link">Incrementally correct personal websites</a>
+    
+    <a href="#" class="year-group__link">Automating the boring parts of product design</a>
+    
+    <a href="#" class="year-group__link">The meta skills of product design</a>
+    
+    <a href="#" class="year-group__link">Product design portfolios</a>
+    
+    <a href="#" class="year-group__link">The death of designer unicorns</a>
+    
+  </div>
+</section>
+
+<section class="year-group animate-in">
+  <div class="year-group__label">2019</div>
+  <div class="year-group__list">
+    
+    <a href="#" class="year-group__link">2019 in review</a>
+    
+    <a href="#" class="year-group__link">On working nights and weekends</a>
+    
+    <a href="#" class="year-group__link">A primer on investing for designers and developers</a>
+    
+    <a href="#" class="year-group__link">Caching API routes with Next.js + Now</a>
+    
+    <a href="#" class="year-group__link">Using Ghost as a headless CMS with Next.js</a>
+    
+    <a href="#" class="year-group__link">Adding dark mode with Next.js, styled-components, and useDarkMode</a>
+    
+    <a href="#" class="year-group__link">Migrating from Google Analytics to Fathom</a>
+    
+  </div>
+</section>
+
+
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

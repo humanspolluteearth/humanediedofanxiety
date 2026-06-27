@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Texting with Notion AI — Capturing ideas, CRM updates, and reading list books straight from iMessage via Twilio.">
+  <title>Brian Lovin — Texting with Notion AI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <button class="topbar__menu-btn" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+    
+    <div class="topbar__breadcrumb">
+      <a href="/">Brian Lovin</a>
+      <span class="topbar__breadcrumb-sep">/</span>
+      <a href="/writing/">Writing</a>
+    </div>
+    
+  </header>
+
+  <!-- Slide-out Navigation Drawer -->
+  <nav class="nav-drawer" aria-label="Main Navigation">
+    <button class="nav-drawer__close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="nav-drawer__links">
+      
+      <a href="/" class="nav-drawer__link">Home</a>
+      
+      <a href="/about/" class="nav-drawer__link">About</a>
+      
+      <a href="/writing/" class="nav-drawer__link is-active">Writing</a>
+      
+      
+      <div class="nav-drawer__section-label">Projects</div>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Hacker News</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">App Dissection</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Stack</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">AMA</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">TIL</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Listening</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Sites</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Shiori</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">HN CLI</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Tax UI</a>
+      
+    </div>
+    
+    <div class="nav-drawer__social">
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+
+  <!-- Page Content -->
+  <main class="page-wrapper page-content">
+    <article class="animate-in">
+  <div class="post-meta">Nov 24, 2025</div>
+  <h1 class="post-title">Texting with Notion AI</h1>
+  
+  <div class="post-actions">
+    <button class="post-actions__btn" id="like-button" aria-label="Like this post">
+      <span style="margin-right: 4px;">❤️</span> <span id="like-count">173</span>
+    </button>
+  </div>
+
+  <div class="post-body">
+    <p>I need a faster way to capture ideas into Notion from my phone without having to open the mobile app, navigate to the right database, and type out a bunch of properties.</p>
+    <p>I want to activate Siri or open iMessage and say something like: &quot;Remind me to schedule coffee with Jeff next week&quot; and have that task automatically route itself to the right database with as many properties pre-filled as possible. It should have the ability to look up things like &quot;Jeff&quot; and try to see if I have notes about this person in other databases.</p>
+    <p>Notion AI has all the context it needs to connect the dots between my work, tasks, and relationships. It just needs to be easier to summon.</p>
+
+    <h2>Use cases</h2>
+    <ul>
+      
+      <li>Create and update reminders/todos</li>
+      
+      <li>Add people to my personal CRM or update notes about a person after a meeting</li>
+      
+      <li>Take photos of things I want to track, like books I want to add to my reading list, and extract structured data to pre-fill database properties</li>
+      
+      <li>Ask questions about anything in my Notion workspace — Notion AI is connected to my email and calendar and over time has access to more and more nuanced context about my work and relationships</li>
+      
+      <li>More in the future — in theory, anything Notion AI can do with pages, databases, and automations I should be able to control directly through the Messages app</li>
+      
+    </ul>
+
+    <img src="/jeeves_chat.jpg" alt="A screenshot of an iOS Messages thread showing chat with Jeeves contact">
+
+    <h2>How it works</h2>
+    <ol>
+      
+      <li>I send a text message to a phone number registered through Twilio.</li>
+      
+      <li>Twilio forwards the message to a self-hosted API endpoint.</li>
+      
+      <li>My API verifies that the message came from my phone number, then creates a page in a Notion database called "Texts" with a <code>User</code> sender property and the message contents as the page title.</li>
+      
+      <li>A Notion Custom Agent is "woken up" by this new page and uses its custom instructions to handle the incoming message.</li>
+      
+      <li>When the custom agent is finished working, it creates a new page in the same Texts database with its "receipt" of anything it did.</li>
+      
+      <li>This new Assistant message in the Texts database pings a different API endpoint on my server that forwards the receipt to Twilio, and finally back to my phone.</li>
+      
+    </ol>
+
+    <!-- Dynamic inline diagram using CSS custom elements -->
+    <div class="post-diagram">
+      
+      
+      <div class="post-diagram__icon" style="background-color: #f3f4f6; color: #1f2937;" title="Messages">💬</div>
+      
+      <span class="post-diagram__arrow">→</span>
+      <div class="post-diagram__icon" style="background-color: #fee2e2; color: #ef4444;" title="Twilio">📞</div>
+      
+      <span class="post-diagram__arrow">→</span>
+      <div class="post-diagram__icon" style="background-color: #dbeafe; color: #2563eb;" title="API">⚙️</div>
+      
+      <span class="post-diagram__arrow">→</span>
+      <div class="post-diagram__icon" style="background-color: #f3e8ff; color: #9333ea;" title="Notion">📓</div>
+      
+    </div>
+
+    <h2>The custom agent</h2>
+    <p>The magic happens right there in the middle with my custom agent, Jeeves. He has access to my core databases (todos, books, people, journal, etc.) so he can search and take action everywhere. My prompt for Jeeves explains the purpose of each of these databases, how I like the properties to be pre-filled (if at all), explains that he can look back through earlier messages to get context on the conversation so far, and includes a directive to always create a final Assistant reply when he&#39;s done working.</p>
+
+    <img src="/notion_database.jpg" alt="A screenshot of the AI logs database showing incoming messages and structured AI statuses">
+
+    <h2>The experience so far</h2>
+    <ul>
+      
+      <li>This setup is ideal for quick capture. I love being able to text Jeeves from anywhere, desktop or mobile, and it feels quite natural to have Jeeves as &quot;just another contact&quot; I can talk to.</li>
+      
+      <li>Because Jeeves is &quot;just another contact&quot; he integrates really well into the Apple ecosystem, meaning I can use Siri to dictate texts for super fast capture. This comes in really handy when I&#39;m walking and need to capture something with my AirPods.</li>
+      
+      <li>Being able to capture photos and have Notion AI extract info to pre-populate properties is magical. Nobody likes fiddling with properties.</li>
+      
+    </ul>
+
+    <h2>Tradeoffs</h2>
+    <ul>
+      
+      <li>Green bubble texting doesn't handle streaming responses, so texting Jeeves will always feel slower and less responsive than using a native AI chat tool like Claude or ChatGPT. This ends up being fine for my quick-capture use case, however.
+        
+        <ul>
+          
+          <li>There are startups like <a href="#">Linq</a> that recreate a blue bubble iMessage experience with typing indicators and reactions, but I am not willing to pay the setup fee for a side project.</li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>iMessage sometimes breaks a single message that contains a link into three separate messages. This is infuriating. If you type some text, paste a link, and add a bit more text, iMessage will break this into three bubbles, each received one at a time by the API. This confuses Jeeves and it takes a lot longer for him to reason about how the messages are related.
+        
+      </li>
+      
+      <li>Jeeves has to be well-prompted. He needs to discern between a request about adding something to my todo list vs. saving a book in my Books database. This takes a bit of trial and error, and some occasional tweaks to get the output/tone to feel right.
+        
+      </li>
+      
+      <li>It's obviously way too complicated! No normal person would be willing to fight through a multi-day Twilio phone number verification process to wire this up, let alone self-hosting an API to handle all the routing and page creation. It'd be nice if I could eliminate the API steps of the workflow to keep as much of the logic baked into Notion AI as possible.
+        
+      </li>
+      
+    </ul>
+  </div>
+
+  <!-- Read Next section -->
+  <section class="read-next">
+    <h3 class="read-next__label">Read next</h3>
+    <div class="read-next__list">
+      
+      <a href="#" class="read-next__link">Dear Apple: Please fix iMessage spam</a>
+      
+      <a href="#" class="read-next__link">Syncing Claude Code settings between computers</a>
+      
+      <a href="#" class="read-next__link">Hiring design-minded frontend engineers</a>
+      
+      <a href="/writing/" class="read-next__link">2019 in review</a>
+      
+      <a href="#" class="read-next__link">Tailwind CSS first impressions</a>
+      
+    </div>
+  </section>
+</article>
+
+<script>
+  // Simple micro-interaction for the like button
+  document.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('like-button');
+    const likeCount = document.getElementById('like-count');
+    let liked = false;
+    let count = 173;
+
+    if (likeButton && likeCount) {
+      likeButton.addEventListener('click', () => {
+        if (!liked) {
+          count++;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '#fee2e2';
+          likeButton.style.color = '#ef4444';
+          liked = true;
+        } else {
+          count--;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '';
+          likeButton.style.color = '';
+          liked = false;
+        }
+      });
+    }
+  });
+</script>
+
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

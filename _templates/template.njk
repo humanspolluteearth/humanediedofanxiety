@@ -1,0 +1,30 @@
+<!--
+  ============================================
+  NEW POST TEMPLATE
+  ============================================
+  
+  HOW TO USE:
+  
+  1. Copy  _templates/template.json  →  _data/<your-post-slug>.json
+     Fill in your content (title, date, paragraphs, sections, etc.)
+  
+  2. Copy  _templates/template.njk   →  <your-post-slug>.njk  (project root)
+     Change the {% set post = template %} line below to match your data filename:
+       e.g.  {% set post = my_new_post %}   (for _data/my_new_post.json)
+  
+  3. Add your post to  _data/writing.json  under the correct year:
+       { "title": "Your Post Title", "url": "/<your-post-slug>/" }
+  
+  4. Save — Eleventy will auto-build it. Visit /<your-post-slug>/
+  
+  ============================================
+-->
+---
+layout: layout.njk
+title: Your Post Title Here
+description: A brief meta description for SEO and social sharing.
+pageType: post
+---
+{# Point this to your _data JSON filename (without extension) #}
+{% set post = template %}
+{% include "post-content.njk" %}

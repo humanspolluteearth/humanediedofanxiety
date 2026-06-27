@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Brian Lovin — Software designer and developer portfolio, work history, and speaking details.">
+  <title>Brian Lovin — About</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <button class="topbar__menu-btn" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+    
+    <div class="topbar__breadcrumb">
+      <a href="/">Brian Lovin</a>
+      <span class="topbar__breadcrumb-sep">/</span>
+      <span class="topbar__breadcrumb-current">About</span>
+    </div>
+    
+  </header>
+
+  <!-- Slide-out Navigation Drawer -->
+  <nav class="nav-drawer" aria-label="Main Navigation">
+    <button class="nav-drawer__close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="nav-drawer__links">
+      
+      <a href="/" class="nav-drawer__link">Home</a>
+      
+      <a href="/about/" class="nav-drawer__link is-active">About</a>
+      
+      <a href="/writing/" class="nav-drawer__link">Writing</a>
+      
+      
+      <div class="nav-drawer__section-label">Projects</div>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Hacker News</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">App Dissection</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Stack</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">AMA</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">TIL</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Listening</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Sites</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Shiori</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">HN CLI</a>
+      
+      <a href="#" class="nav-drawer__link nav-drawer__link--muted">Tax UI</a>
+      
+    </div>
+    
+    <div class="nav-drawer__social">
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+
+  <!-- Page Content -->
+  <main class="page-wrapper page-content">
+    <div class="animate-in">
+  <img src="/avatar.jpg" alt="Brian Lovin" class="about-avatar">
+  
+  <div class="about-bio">
+    
+    <p>I'm a designer and software engineer living in San Francisco.</p>
+    
+    <p>I'm currently designing AI products at <a href="https://notion.so" target="_blank" rel="noopener noreferrer">Notion</a>. Before Notion, I was the co-founder of <a href="#">Campsite</a>, an app that combined posts, docs, calls, and chat to enable thoughtful team collaboration.</p>
+    
+    <p>Before Campsite, I spent four years designing the <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Mobile</a> apps. I joined GitHub after they acquired my first startup, <a href="#">Spectrum</a>, a platform for branded communities to have better public conversations.</p>
+    
+    <p>Before Spectrum, I designed payments experiences at <a href="https://meta.com" target="_blank" rel="noopener noreferrer">Facebook</a>, working across Facebook, Messenger, WhatsApp, and Instagram. I originally cut my teeth as the first product designer at <a href="https://buffer.com" target="_blank" rel="noopener noreferrer">Buffer</a>.</p>
+    
+    <p>Along the way, I was a co-host of the <a href="#">Design Details</a> podcast for nine years, a weekly conversation about design process and culture. I also created <a href="#">Staff Design</a>, an interview project about navigating the individual contributor career path.</p>
+    
+  </div>
+</div>
+
+<!-- Social Media Links -->
+<div class="social-icons animate-in">
+  <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+  </a>
+  <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Work Section -->
+<section class="work-section animate-in">
+  <h2 class="work-section__title">Work</h2>
+  <div class="work-table">
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #000000;">N</div>
+      <span class="work-table__company">Notion</span>
+      <span class="work-table__role">Product Designer</span>
+      <span class="work-table__period">Current</span>
+    </div>
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #E15A42;">C</div>
+      <span class="work-table__company">Campsite</span>
+      <span class="work-table__role">Co-founder</span>
+      <span class="work-table__period">2022–25</span>
+    </div>
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #24292e;">G</div>
+      <span class="work-table__company">GitHub</span>
+      <span class="work-table__role">Product Designer</span>
+      <span class="work-table__period">2018–22</span>
+    </div>
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #7B16FF;">S</div>
+      <span class="work-table__company">Spectrum</span>
+      <span class="work-table__role">Co-founder</span>
+      <span class="work-table__period">2017–18</span>
+    </div>
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #1877F2;">F</div>
+      <span class="work-table__company">Facebook</span>
+      <span class="work-table__role">Product Designer</span>
+      <span class="work-table__period">2015–17</span>
+    </div>
+    
+    <div class="work-table__row">
+      <div class="work-table__icon" style="background-color: #000000;">B</div>
+      <span class="work-table__company">Buffer</span>
+      <span class="work-table__role">Product Designer</span>
+      <span class="work-table__period">2013–15</span>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="section animate-in">
+  <div class="section__header">
+    <h2 class="section__title">Projects</h2>
+  </div>
+  <div class="project-list">
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">HN</a></span>
+      <span class="project-list__desc">A minimal hacker news reader</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">App Dissection</a></span>
+      <span class="project-list__desc">Breaking down well-designed apps</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">Stack</a></span>
+      <span class="project-list__desc">My favorite apps and tools</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">AMA</a></span>
+      <span class="project-list__desc">Ask me anything</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">TIL</a></span>
+      <span class="project-list__desc">Today I learned</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">Listening</a></span>
+      <span class="project-list__desc">Music in rotation</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#">Sites</a></span>
+      <span class="project-list__desc">A curated list of well-designed websites</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">Shiori <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">A beautifully simple read-it-later app</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">Staff Design <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">Navigating the IC career path</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">Design Details <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">A podcast about design and technology</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">How to Computer Better <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">How to use a computer better</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">Crit <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">Solicited app redesigns</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">How Terminals Work <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">A visual guide to understand terminals</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">HN CLI <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">Hacker News in your terminal</span>
+    </div>
+    
+    <div class="project-list__item">
+      <span class="project-list__name"><a href="#" target="_blank" rel="noopener noreferrer">Tax UI <span class="project-list__external">↗</span></a></span>
+      <span class="project-list__desc">Chat with your tax returns</span>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Speaking Section -->
+<section class="section animate-in">
+  <div class="section__header">
+    <h2 class="section__title">Speaking</h2>
+  </div>
+  <div class="speaking-list">
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">The Myth of the Founder Designer w Joey Flynn</span>
+      <span class="speaking-list__date">May &#39;26</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Dive Club: Level up with AI</span>
+      <span class="speaking-list__date">Apr &#39;26</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">How I AI</span>
+      <span class="speaking-list__date">Feb &#39;26</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Founder Fridays with Brian Lovin</span>
+      <span class="speaking-list__date">Aug &#39;25</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Design Founders Night with Designer Fund</span>
+      <span class="speaking-list__date">Jun &#39;25</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">How Campsite built a design-led company</span>
+      <span class="speaking-list__date">Sep &#39;24</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">FocusTime: Boring routines and capturing inspiration</span>
+      <span class="speaking-list__date">Aug &#39;24</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Full Stack Whatever with Ryan Nystrom</span>
+      <span class="speaking-list__date">Dec &#39;23</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Deep Dive: Lessons from Campsite</span>
+      <span class="speaking-list__date">Nov &#39;23</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Deep Dive: How to level up as an IC designer</span>
+      <span class="speaking-list__date">Nov &#39;23</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Design, engineering, and starting a company</span>
+      <span class="speaking-list__date">Aug &#39;23</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Full Stack Whatever</span>
+      <span class="speaking-list__date">Jan &#39;23</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Metamuse: Personal brand</span>
+      <span class="speaking-list__date">Mar &#39;22</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">The Art of Product: The art and pain of design</span>
+      <span class="speaking-list__date">Mar &#39;22</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Optimal Path: The Spectrum of design</span>
+      <span class="speaking-list__date">Jan &#39;22</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">UI Breakfast: Design advising</span>
+      <span class="speaking-list__date">Dec &#39;21</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Design MBA: Managing side projects</span>
+      <span class="speaking-list__date">Nov &#39;21</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Progression: The rise of the senior IC</span>
+      <span class="speaking-list__date">Jun &#39;21</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Layout.fm</span>
+      <span class="speaking-list__date">Jan &#39;21</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Software Engineering Daily: GitHub Mobile</span>
+      <span class="speaking-list__date">Jul &#39;20</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Figma Config: Extend what&#39;s possible with Plugins</span>
+      <span class="speaking-list__date">Feb &#39;20</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Swift by Sundell: Building for open source</span>
+      <span class="speaking-list__date">Feb &#39;20</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Lovers Magazine</span>
+      <span class="speaking-list__date">Jan &#39;18</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">GraphQL Summit: Designing with GraphQL</span>
+      <span class="speaking-list__date">Nov &#39;17</span>
+    </div>
+    
+    <div class="speaking-list__item">
+      <span class="speaking-list__title">Design Details</span>
+      <span class="speaking-list__date">Aug &#39;17</span>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Investments Section -->
+<section class="section animate-in">
+  <div class="section__header">
+    <h2 class="section__title">Investments</h2>
+  </div>
+  <div class="investment-list">
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Dashworks</span>
+      
+      <span class="investment-list__status">Acquired</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Liveblocks</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Zed</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Ambrook</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Muse</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Equals</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">tldraw</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Diagram</span>
+      
+      <span class="investment-list__status">Acquired</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Copilot</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Hex</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Stellate</span>
+      
+      <span class="investment-list__status">Acquired</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Eraser</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Gumroad</span>
+      
+    </div>
+    
+    <div class="investment-list__item">
+      <span class="investment-list__name">Any Distance</span>
+      
+    </div>
+    
+  </div>
+</section>
+
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

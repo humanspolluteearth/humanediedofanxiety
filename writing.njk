@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+title: Brian Lovin — Writing
+description: Writing by Brian Lovin — Articles on design, development, productivity, and startups.
+pageType: writing
+---
+<h1 class="writing-title animate-in">Writing</h1>
+
+{% for group in writing.years %}
+<section class="year-group animate-in">
+  <div class="year-group__label">{{ group.year }}</div>
+  <div class="year-group__list">
+    {% for post in group.posts %}
+    <a href="{{ post.url }}" class="year-group__link">{{ post.title }}</a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

@@ -1,0 +1,84 @@
+{
+  "years": [
+    {
+      "year": "2026",
+      "posts": [
+        { "title": "Give your agent a laboratory, pt. II", "url": "/texting-with-notion-ai/" },
+        { "title": "Why I'm excited about Notion Workers", "url": "/texting-with-notion-ai/" },
+        { "title": "Use the ✦ Hyper key", "url": "/texting-with-notion-ai/" },
+        { "title": "Omarchy first impressions", "url": "/texting-with-notion-ai/" },
+        { "title": "Syncing Claude Code settings between computers", "url": "/texting-with-notion-ai/" },
+        { "title": "Give your agent a stopwatch", "url": "/texting-with-notion-ai/" },
+        { "title": "Give your agent a laboratory", "url": "/texting-with-notion-ai/" }
+      ]
+    },
+    {
+      "year": "2025",
+      "posts": [
+        { "title": "Texting with Notion AI", "url": "/texting-with-notion-ai/" },
+        { "title": "Hiring design-minded frontend engineers", "url": "#" }
+      ]
+    },
+    {
+      "year": "2024",
+      "posts": [
+        { "title": "Team communication is broken", "url": "#" }
+      ]
+    },
+    {
+      "year": "2022",
+      "posts": [
+        { "title": "Framer Sites first impressions", "url": "#" },
+        { "title": "Design critique for fun and profit", "url": "#" },
+        { "title": "The Side Project Prophecy", "url": "#" },
+        { "title": "How my website works", "url": "#" }
+      ]
+    },
+    {
+      "year": "2021",
+      "posts": [
+        { "title": "Typing fast is a high-leverage skill", "url": "#" },
+        { "title": "Dear Apple: Please fix iMessage spam", "url": "#" },
+        { "title": "The shape of software", "url": "#" },
+        { "title": "What I've learned so far about design advising and angel investing", "url": "#" },
+        { "title": "How to give a great product design portfolio presentation", "url": "#" },
+        { "title": "Make a personal changelog", "url": "#" },
+        { "title": "What I learned from Staff Design", "url": "#" },
+        { "title": "My playbook for shipping side projects", "url": "#" },
+        { "title": "Becoming a better interviewer", "url": "#" },
+        { "title": "2020 in review", "url": "#" }
+      ]
+    },
+    {
+      "year": "2020",
+      "posts": [
+        { "title": "Reasons you aren't updating your personal site", "url": "#" },
+        { "title": "Tailwind CSS first impressions", "url": "#" },
+        { "title": "Design to save people from themselves", "url": "#" },
+        { "title": "True respect is the difference", "url": "#" },
+        { "title": "Writing better self reviews", "url": "#" },
+        { "title": "2020 mid-year review", "url": "#" },
+        { "title": "Quality software", "url": "#" },
+        { "title": "Just-for-me authentication", "url": "#" },
+        { "title": "Using cookies to authenticate Next.js + Apollo GraphQL requests", "url": "#" },
+        { "title": "Incrementally correct personal websites", "url": "#" },
+        { "title": "Automating the boring parts of product design", "url": "#" },
+        { "title": "The meta skills of product design", "url": "#" },
+        { "title": "Product design portfolios", "url": "#" },
+        { "title": "The death of designer unicorns", "url": "#" }
+      ]
+    },
+    {
+      "year": "2019",
+      "posts": [
+        { "title": "2019 in review", "url": "#" },
+        { "title": "On working nights and weekends", "url": "#" },
+        { "title": "A primer on investing for designers and developers", "url": "#" },
+        { "title": "Caching API routes with Next.js + Now", "url": "#" },
+        { "title": "Using Ghost as a headless CMS with Next.js", "url": "#" },
+        { "title": "Adding dark mode with Next.js, styled-components, and useDarkMode", "url": "#" },
+        { "title": "Migrating from Google Analytics to Fathom", "url": "#" }
+      ]
+    }
+  ]
+}

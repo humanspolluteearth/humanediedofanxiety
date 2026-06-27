@@ -1,0 +1,140 @@
+---
+layout: layout.njk
+title: Brian Lovin — {{ post.title }}
+description: {{ post.title }} — {{ post.intro | truncate(120) }}
+pageType: post
+---
+{# ============================================
+   Shared Post Layout Partial
+   All blog posts use this via:
+     {% set post = your_data_variable %}
+     {% include "post-content.njk" %}
+   ============================================ #}
+<article class="animate-in">
+  <div class="post-meta">{{ post.date }}</div>
+  <h1 class="post-title">{{ post.title }}</h1>
+
+  {% if post.initialLikes %}
+  <div class="post-actions">
+    <button class="post-actions__btn" id="like-button" aria-label="Like this post">
+      <span style="margin-right: 4px;">❤️</span> <span id="like-count">{{ post.initialLikes }}</span>
+    </button>
+  </div>
+  {% endif %}
+
+  <div class="post-body">
+    {# — Intro paragraphs — #}
+    {% if post.intro %}
+    <p>{{ post.intro }}</p>
+    {% endif %}
+
+    {% if post.summaryParagraph %}
+    <p>{{ post.summaryParagraph }}</p>
+    {% endif %}
+
+    {% if post.contextParagraph %}
+    <p>{{ post.contextParagraph }}</p>
+    {% endif %}
+
+    {# — Content sections — #}
+    {% if post.sections %}
+    {% for section in post.sections %}
+
+    <h2>{{ section.heading }}</h2>
+
+    {% if section.paragraphs %}
+    {% for p in section.paragraphs %}
+    <p>{{ p | safe }}</p>
+    {% endfor %}
+    {% endif %}
+
+    {% if section.unorderedList %}
+    <ul>
+      {% for item in section.unorderedList %}
+      <li>{{ item.text | safe }}
+        {% if item.subItems %}
+        <ul>
+          {% for sub in item.subItems %}
+          <li>{{ sub | safe }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if section.orderedList %}
+    <ol>
+      {% for item in section.orderedList %}
+      <li>{{ item | safe }}</li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if section.image %}
+    <img src="{{ section.image.src }}" alt="{{ section.image.alt }}">
+    {% endif %}
+
+    {% if section.diagram %}
+    <div class="post-diagram">
+      {% for node in section.diagram %}
+      {% if not loop.first %}<span class="post-diagram__arrow">→</span>{% endif %}
+      <div class="post-diagram__icon" style="background-color: {{ node.bg }}; color: {{ node.color }};" title="{{ node.label }}">{{ node.emoji }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.code %}
+    <pre><code>{{ section.code | safe }}</code></pre>
+    {% endif %}
+
+    {% if section.blockquote %}
+    <blockquote><p>{{ section.blockquote | safe }}</p></blockquote>
+    {% endif %}
+
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  {# — Read Next — #}
+  {% if post.readNext %}
+  <section class="read-next">
+    <h3 class="read-next__label">Read next</h3>
+    <div class="read-next__list">
+      {% for link in post.readNext %}
+      <a href="{{ link.url }}" class="read-next__link">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+
+{% if post.initialLikes %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('like-button');
+    const likeCount = document.getElementById('like-count');
+    let liked = false;
+    let count = {{ post.initialLikes }};
+
+    if (likeButton && likeCount) {
+      likeButton.addEventListener('click', () => {
+        if (!liked) {
+          count++;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '#fee2e2';
+          likeButton.style.color = '#ef4444';
+          liked = true;
+        } else {
+          count--;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '';
+          likeButton.style.color = '';
+          liked = false;
+        }
+      });
+    }
+  });
+</script>
+{% endif %}

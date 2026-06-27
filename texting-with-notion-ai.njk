@@ -1,0 +1,111 @@
+---
+layout: layout.njk
+title: Brian Lovin — Texting with Notion AI
+description: Texting with Notion AI — Capturing ideas, CRM updates, and reading list books straight from iMessage via Twilio.
+pageType: post
+---
+<article class="animate-in">
+  <div class="post-meta">{{ notion_ai_post.date }}</div>
+  <h1 class="post-title">{{ notion_ai_post.title }}</h1>
+  
+  <div class="post-actions">
+    <button class="post-actions__btn" id="like-button" aria-label="Like this post">
+      <span style="margin-right: 4px;">❤️</span> <span id="like-count">{{ notion_ai_post.initialLikes }}</span>
+    </button>
+  </div>
+
+  <div class="post-body">
+    <p>{{ notion_ai_post.intro }}</p>
+    <p>{{ notion_ai_post.summaryParagraph }}</p>
+    <p>{{ notion_ai_post.contextParagraph }}</p>
+
+    <h2>Use cases</h2>
+    <ul>
+      {% for item in notion_ai_post.useCases %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <img src="{{ notion_ai_post.chatImage }}" alt="{{ notion_ai_post.chatImageAlt }}">
+
+    <h2>How it works</h2>
+    <ol>
+      {% for step in notion_ai_post.howItWorks %}
+      <li>{{ step | safe }}</li>
+      {% endfor %}
+    </ol>
+
+    <!-- Dynamic inline diagram using CSS custom elements -->
+    <div class="post-diagram">
+      {% for node in notion_ai_post.diagram %}
+      {% if not loop.first %}<span class="post-diagram__arrow">→</span>{% endif %}
+      <div class="post-diagram__icon" style="background-color: {{ node.bg }}; color: {{ node.color }};" title="{{ node.label }}">{{ node.emoji }}</div>
+      {% endfor %}
+    </div>
+
+    <h2>The custom agent</h2>
+    <p>{{ notion_ai_post.agentDescription }}</p>
+
+    <img src="{{ notion_ai_post.databaseImage }}" alt="{{ notion_ai_post.databaseImageAlt }}">
+
+    <h2>The experience so far</h2>
+    <ul>
+      {% for point in notion_ai_post.experiencePoints %}
+      <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Tradeoffs</h2>
+    <ul>
+      {% for tradeoff in notion_ai_post.tradeoffs %}
+      <li>{{ tradeoff.text | safe }}
+        {% if tradeoff.subItems %}
+        <ul>
+          {% for sub in tradeoff.subItems %}
+          <li>{{ sub | safe }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Read Next section -->
+  <section class="read-next">
+    <h3 class="read-next__label">Read next</h3>
+    <div class="read-next__list">
+      {% for link in notion_ai_post.readNext %}
+      <a href="{{ link.url }}" class="read-next__link">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </section>
+</article>
+
+<script>
+  // Simple micro-interaction for the like button
+  document.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('like-button');
+    const likeCount = document.getElementById('like-count');
+    let liked = false;
+    let count = {{ notion_ai_post.initialLikes }};
+
+    if (likeButton && likeCount) {
+      likeButton.addEventListener('click', () => {
+        if (!liked) {
+          count++;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '#fee2e2';
+          likeButton.style.color = '#ef4444';
+          liked = true;
+        } else {
+          count--;
+          likeCount.textContent = count;
+          likeButton.style.backgroundColor = '';
+          likeButton.style.color = '';
+          liked = false;
+        }
+      });
+    }
+  });
+</script>
