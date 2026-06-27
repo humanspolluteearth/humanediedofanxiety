@@ -39,6 +39,36 @@
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+[data-theme="dark"] {
+  --color-bg: #121212;
+  --color-text: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-text-tertiary: #666666;
+  --color-link: #e0e0e0;
+  --color-link-hover: #ffffff;
+  --color-border: #333333;
+  --color-accent: #60a5fa;
+  --color-bg-hover: #1a1a1a;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] body {
+  background: black;
+}
+
+[data-theme="dark"] .topbar {
+  background: black;
+}
+
+[data-theme="dark"] .topbar::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(96, 165, 250, 0.15) 50%,
+    transparent 100%
+  );
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -947,43 +977,41 @@ p {
    ============================================ */
 .cursor-glow {
   position: fixed;
-  width: 420px;
-  height: 420px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(253, 224, 71, 0.22) 0%,
-    rgba(253, 224, 71, 0.12) 25%,
-    rgba(253, 224, 71, 0.05) 50%,
-    transparent 70%
-  );
+  background: white;
+  mix-blend-mode: difference;
   opacity: 0;
   transition:
     opacity 0.35s ease,
     width 0.4s ease,
-    height 0.4s ease,
-    background 0.4s ease;
-  will-change: transform, opacity;
+    height 0.4s ease;
+  will-change: transform, opacity, width, height;
 }
 
 .cursor-glow.is-visible {
   opacity: 1;
 }
 
-/* Intensify glow on interactive elements */
+/* Enlarge on interactive elements */
 .cursor-glow.is-hovering {
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(
-    circle,
-    rgba(253, 224, 71, 0.35) 0%,
-    rgba(253, 224, 71, 0.18) 25%,
-    rgba(253, 224, 71, 0.06) 50%,
-    transparent 70%
-  );
+  width: 60px;
+  height: 60px;
+}
+
+/* Dark mode vibrant selection & glow */
+[data-theme="dark"] ::selection {
+  background: rgba(96, 165, 250, 0.4);
+  color: #ffffff;
+}
+
+[data-theme="dark"] ::-moz-selection {
+  background: rgba(96, 165, 250, 0.4);
+  color: #ffffff;
 }
 
 /* ============================================
@@ -992,7 +1020,7 @@ p {
 
 /* Subtle warm tint on the page background */
 body {
-  background-color: #fefefe;
+  background-color: var(--color-bg);
   background-image:
     radial-gradient(
       ellipse at 20% 0%,
