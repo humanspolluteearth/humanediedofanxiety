@@ -39,7 +39,6 @@ pageType: about
   <div class="work-table">
     {% for job in about.work %}
     <div class="work-table__row">
-      <div class="work-table__icon" style="background-color: {{ job.color }};">{{ job.icon }}</div>
       <span class="work-table__company">{{ job.company }}</span>
       <span class="work-table__role">{{ job.role }}</span>
       <span class="work-table__period">{{ job.period }}</span>
@@ -63,20 +62,7 @@ pageType: about
   </div>
 </section>
 
-<!-- Speaking Section -->
-<section class="section animate-in">
-  <div class="section__header">
-    <h2 class="section__title">Speaking</h2>
-  </div>
-  <div class="speaking-list">
-    {% for talk in about.speaking %}
-    <div class="speaking-list__item">
-      <span class="speaking-list__title">{{ talk.title }}</span>
-      <span class="speaking-list__date">{{ talk.date }}</span>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+
 
 <!-- Investments Section -->
 <section class="section animate-in">

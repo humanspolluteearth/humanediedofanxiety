@@ -1,34 +1,9 @@
 {
   "avatar": "/avatar.jpg",
-  "name": "Brian Lovin",
-  "bio": "I'm a software designer living in San Francisco, currently making AI products at Notion.",
+  "name": "Human",
+  "bio": "Fox. Drogba. Porsche. Beef. Code. ",
   "socials": {
-    "twitter": "https://x.com",
-    "youtube": "https://youtube.com",
-    "github": "https://github.com"
-  },
-  "recentWriting": [
-    { "title": "Give your agent a laboratory, pt. II", "url": "/texting-with-notion-ai/" },
-    { "title": "Why I'm excited about Notion Workers", "url": "/texting-with-notion-ai/" },
-    { "title": "Use the ✦ Hyper key", "url": "/texting-with-notion-ai/" },
-    { "title": "Omarchy first impressions", "url": "/texting-with-notion-ai/" },
-    { "title": "Syncing Claude Code settings between computers", "url": "/texting-with-notion-ai/" }
-  ],
-  "projects": [
-    { "name": "HN", "desc": "A minimal hacker news reader", "url": "#", "isExternal": false },
-    { "name": "App Dissection", "desc": "Breaking down well-designed apps", "url": "#", "isExternal": false },
-    { "name": "Stack", "desc": "My favorite apps and tools", "url": "#", "isExternal": false },
-    { "name": "AMA", "desc": "Ask me anything", "url": "#", "isExternal": false },
-    { "name": "TIL", "desc": "Today I learned", "url": "#", "isExternal": false },
-    { "name": "Listening", "desc": "Music in rotation", "url": "#", "isExternal": false },
-    { "name": "Sites", "desc": "A curated list of well-designed websites", "url": "#", "isExternal": false },
-    { "name": "Shiori", "desc": "A beautifully simple read-it-later app", "url": "#", "isExternal": true },
-    { "name": "Staff Design", "desc": "Navigating the IC career path", "url": "#", "isExternal": true },
-    { "name": "Design Details", "desc": "A podcast about design and technology", "url": "#", "isExternal": true },
-    { "name": "How to Computer Better", "desc": "How to use a computer better", "url": "#", "isExternal": true },
-    { "name": "Crit", "desc": "Solicited app redesigns", "url": "#", "isExternal": true },
-    { "name": "How Terminals Work", "desc": "A visual guide to understand terminals", "url": "#", "isExternal": true },
-    { "name": "HN CLI", "desc": "Hacker News in your terminal", "url": "#", "isExternal": true },
-    { "name": "Tax UI", "desc": "Chat with your tax returns", "url": "#", "isExternal": true }
-  ]
+    "facebook": "https://facebook.com",
+    "github": "https://github.com/humanspolluteearth"
+  }
 }
