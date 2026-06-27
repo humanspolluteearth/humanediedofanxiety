@@ -5,7 +5,7 @@ description: About Brian Lovin — Software designer and developer portfolio, wo
 pageType: about
 ---
 <div class="animate-in">
-  <img src="{{ about.avatar }}" alt="{{ site.name }}" class="about-avatar">
+  <img src="{{ about.avatar | url }}" alt="{{ site.name }}" class="about-avatar">
   
   <div class="about-bio">
     {% for paragraph in about.bioParagraphs %}
@@ -56,7 +56,7 @@ pageType: about
   <div class="project-list">
     {% for project in about.projects %}
     <div class="project-list__item">
-      <span class="project-list__name">{% if project.isExternal %}<a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }} <span class="project-list__external">↗</span></a>{% else %}<a href="{{ project.url }}">{{ project.name }}</a>{% endif %}</span>
+      <span class="project-list__name">{% if project.isExternal %}<a href="{{ project.url }}" target="_blank" rel="noopener noreferrer">{{ project.name }} <span class="project-list__external">↗</span></a>{% else %}<a href="{{ project.url | url }}">{{ project.name }}</a>{% endif %}</span>
       <span class="project-list__desc">{{ project.desc }}</span>
     </div>
     {% endfor %}

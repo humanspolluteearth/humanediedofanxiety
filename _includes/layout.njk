@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ description | default(site.defaultDescription) }}">
   <title>{{ title | default(site.name) }}</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
@@ -22,21 +22,21 @@
     </button>
     {% if pageType == "about" %}
     <div class="topbar__breadcrumb">
-      <a href="/">{{ site.name }}</a>
+      <a href="{{ '/' | url }}">{{ site.name }}</a>
       <span class="topbar__breadcrumb-sep">/</span>
       <span class="topbar__breadcrumb-current">About</span>
     </div>
     {% elif pageType == "writing" %}
     <div class="topbar__breadcrumb">
-      <a href="/">{{ site.name }}</a>
+      <a href="{{ '/' | url }}">{{ site.name }}</a>
       <span class="topbar__breadcrumb-sep">/</span>
       <span class="topbar__breadcrumb-current">Writing</span>
     </div>
     {% elif pageType == "post" %}
     <div class="topbar__breadcrumb">
-      <a href="/">{{ site.name }}</a>
+      <a href="{{ '/' | url }}">{{ site.name }}</a>
       <span class="topbar__breadcrumb-sep">/</span>
-      <a href="/writing/">Writing</a>
+      <a href="{{ '/writing/' | url }}">Writing</a>
     </div>
     {% endif %}
   </header>
@@ -51,12 +51,12 @@
     </button>
     <div class="nav-drawer__links">
       {% for link in site.navLinks %}
-      <a href="{{ link.url }}" class="nav-drawer__link{% if pageType == link.pageType or (link.pageType == 'writing' and pageType == 'post') %} is-active{% endif %}">{{ link.label }}</a>
+      <a href="{{ link.url | url }}" class="nav-drawer__link{% if pageType == link.pageType or (link.pageType == 'writing' and pageType == 'post') %} is-active{% endif %}">{{ link.label }}</a>
       {% endfor %}
       
       <div class="nav-drawer__section-label">Projects</div>
       {% for project in site.navProjects %}
-      <a href="{{ project.url }}" class="nav-drawer__link nav-drawer__link--muted">{{ project.label }}</a>
+      <a href="{{ project.url | url }}" class="nav-drawer__link nav-drawer__link--muted">{{ project.label }}</a>
       {% endfor %}
     </div>
     
@@ -85,6 +85,6 @@
     {{ content | safe }}
   </main>
 
-  <script src="/js/main.js"></script>
+  <script src="{{ '/js/main.js' | url }}"></script>
 </body>
 </html>

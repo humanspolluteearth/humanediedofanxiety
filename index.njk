@@ -5,7 +5,7 @@ description: Brian Lovin — Software designer living in San Francisco, currentl
 pageType: home
 ---
 <div class="animate-in">
-  <img src="{{ home.avatar }}" alt="{{ home.name }}" class="home-avatar">
+  <img src="{{ home.avatar | url }}" alt="{{ home.name }}" class="home-avatar">
   <h1 class="home-name">{{ home.name }}</h1>
   <p class="home-bio">{{ home.bio }}</p>
 </div>
@@ -32,12 +32,12 @@ pageType: home
 <!-- Writing Section -->
 <section class="section animate-in">
   <div class="section__header">
-    <a href="/writing/" class="section__title">Writing</a>
+    <a href="{{ '/writing/' | url }}" class="section__title">Writing</a>
     <span class="section__arrow">&gt;</span>
   </div>
   <div class="post-list">
     {% for post in home.recentWriting %}
-    <a href="{{ post.url }}" class="post-list__item">{{ post.title }}</a>
+    <a href="{{ post.url | url }}" class="post-list__item">{{ post.title }}</a>
     {% endfor %}
   </div>
 </section>

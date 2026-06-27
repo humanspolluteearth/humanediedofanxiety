@@ -11,7 +11,7 @@ pageType: writing
   <div class="year-group__label">{{ group.year }}</div>
   <div class="year-group__list">
     {% for post in group.posts %}
-    <a href="{{ post.url }}" class="year-group__link">{{ post.data.title }}</a>
+    <a href="{{ post.url | url }}" class="year-group__link">{{ post.data.title }}</a>
     {% endfor %}
   </div>
 </section>
