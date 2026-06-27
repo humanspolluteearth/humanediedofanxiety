@@ -5,5 +5,5 @@ tags: posts
 intro: Enough time has been wasted..
 ---
 
-100 Pushups, Take a Shower, Organize Room. <br>
+100 Pushups, Take a Shower, Organize Room.
 Okay now what to do? Study for 180 minutes, run 4 miles and add new tasks.
