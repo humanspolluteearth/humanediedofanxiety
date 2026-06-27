@@ -53,11 +53,11 @@
 }
 
 [data-theme="dark"] body {
-  background: black;
+  background: #0c0c0c;
 }
 
 [data-theme="dark"] .topbar {
-  background: black;
+  background: #0c0c0c;
 }
 
 [data-theme="dark"] .topbar::after {
