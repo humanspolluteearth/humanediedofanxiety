@@ -6,6 +6,18 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("jeeves_chat.jpg");
   eleventyConfig.addPassthroughCopy("notion_database.jpg");
 
+  // Custom date filter: "June 27th"
+  eleventyConfig.addFilter("readableDate", function(dateObj) {
+    const months = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"];
+    const d = new Date(dateObj);
+    const day = d.getDate();
+    const suffix = (day % 10 === 1 && day !== 11) ? "st"
+                 : (day % 10 === 2 && day !== 12) ? "nd"
+                 : (day % 10 === 3 && day !== 13) ? "rd" : "th";
+    return months[d.getMonth()] + " " + day + suffix;
+  });
+
   // Collection to group posts by year
   eleventyConfig.addCollection("postsByYear", function(collectionApi) {
     const posts = collectionApi.getFilteredByTag("posts").reverse();

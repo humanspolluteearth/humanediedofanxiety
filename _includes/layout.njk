@@ -15,24 +15,11 @@
   <!-- Top Navigation Bar -->
   <header class="topbar">
 
-    {% if pageType == "about" %}
-    <div class="topbar__breadcrumb">
-      <a href="{{ '/' | url }}">{{ site.name }}</a>
-      <span class="topbar__breadcrumb-sep">/</span>
-      <span class="topbar__breadcrumb-current">About</span>
-    </div>
-    {% elif pageType == "writing" %}
-    <div class="topbar__breadcrumb">
-      <a href="{{ '/' | url }}">{{ site.name }}</a>
-      <span class="topbar__breadcrumb-sep">/</span>
-      <span class="topbar__breadcrumb-current">Writing</span>
-    </div>
-    {% elif pageType == "post" %}
-    <div class="topbar__breadcrumb">
-      <a href="{{ '/' | url }}">{{ site.name }}</a>
-      <span class="topbar__breadcrumb-sep">/</span>
-      <a href="{{ '/writing/' | url }}">Writing</a>
-    </div>
+    {% if pageType != "home" %}
+    <a href="{{ '/' | url }}" class="topbar__back-link" aria-label="Back to home">
+      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      <span id="back-btn">Back to home</span>
+    </a>
     {% endif %}
     <div style="margin-left: auto;">
       <button id="theme-toggle" class="topbar__menu-btn" aria-label="Toggle dark mode">

@@ -33,7 +33,7 @@ pageType: home
   </div>
   <div class="post-list">
     {% for post in collections.posts | reverse %}
-    <a href="{{ post.url | url }}" class="post-list__item">{{ post.data.title }}</a>
+    <a href="{{ post.url | url }}" class="post-list__item"><span class="post-list__date">{{ post.date | readableDate }}</span> — {{ post.data.title }}</a>
     {% endfor %}
   </div>
 </section>
