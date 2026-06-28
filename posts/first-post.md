@@ -1,5 +1,5 @@
 ---
-title: Day 1 - How to really get started.
+title: How to really get started.
 date: 2026-06-27
 tags: posts
 intro: Enough time has been wasted..
